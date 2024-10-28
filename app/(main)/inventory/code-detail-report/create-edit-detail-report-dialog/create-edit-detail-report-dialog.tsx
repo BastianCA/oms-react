@@ -31,7 +31,7 @@ export const CreateEditEditReportDialog: React.FC<CreateEditEditReportDialogProp
         let valores = data?.data
         if (data.action === "edit") {
             setTitle("Editar")
-            setFormData(values => ({
+            setFormData((values: any) => ({
                 ...values,
                 descripcion: valores?.descripcion ?? '',
                 codigoMaestro: valores?.codigoMaestro ?? '',
@@ -42,7 +42,7 @@ export const CreateEditEditReportDialog: React.FC<CreateEditEditReportDialogProp
             setTitle("Crear")
         } else {
             setTitle("Ficha")
-            setFormData(values => ({
+            setFormData((values: any) => ({
                 ...values,
                 descripcion: valores?.descripcion ?? '',
                 codigoMaestro: valores?.codigoMaestro ?? '',

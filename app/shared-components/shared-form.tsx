@@ -39,7 +39,7 @@ const SharedForm: React.FC<DynamicFormProps> = ({ title, fields, onSubmit, butto
     const [cleanFilter, setCleanFilter] = useState<boolean>(false)
 
     const handleInputChange = (field: string, value: any) => {
-        
+
         setFormData((prevData) => ({
             ...prevData,
             [field]: value,
@@ -62,8 +62,15 @@ const SharedForm: React.FC<DynamicFormProps> = ({ title, fields, onSubmit, butto
             }
         });
         setFormData(defaultValues);
-        onFilterChange(defaultValues); 
+        onFilterChange(defaultValues);
     }, []);
+
+    const handleClearFilter = () => {
+        setFormData({})
+        setCleanFilter(false)
+        onCleanFilter(true)
+    }
+
 
     return (
         <div className='card'>
@@ -119,11 +126,7 @@ const SharedForm: React.FC<DynamicFormProps> = ({ title, fields, onSubmit, butto
                 )}
                 {cleanFilter && (
 
-                    <Button className='mt-3' icon="pi pi-trash" onClick={() => {
-                        setFormData({})
-                        setCleanFilter(false)
-                        onCleanFilter(true)
-                    }}
+                    <Button className='mt-3' icon="pi pi-trash" onClick={handleClearFilter}
                         rounded severity="danger" aria-label="Cancel" tooltip='Limpiar filtro' tooltipOptions={{ position: "top" }} />
                 )}
 

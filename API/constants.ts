@@ -1,4 +1,5 @@
-import env from "../next.config"
+import { env } from "@/next.config"
+
 export abstract class Constants {
   static readonly API_URL: string = `${env?.BASE_URL}`;
   static readonly API_URL_IMAGE: string = `${env?.BASE_URL_IMAGE}`;

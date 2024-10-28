@@ -127,9 +127,9 @@ const AppProfileSidebar = () => {
           No dudes en comunicarte con nosotros para resolver cualquier pregunta o problema que puedas tener.
           <br /> <br /> <strong>Horario de Atención:
             Lunes a Viernes: 8:00 a 17:00 hr. <br /> <br />
-            Teléfono: +569 3865 3306<br />
-            Correo Electrónico: soporte_dda@Sodimac.cl</strong> <br />
-          <br /> Equipo de Desarrollo de Aplicaciones.Gerencia de Soporte, Desarrollo y Automatismos.
+            Teléfono: +56<br />
+            Correo Electrónico: </strong> <br />
+          <br /> Equipo de Desarrollo de Aplicaciones.
         </div>
       </Dialog>
     </Sidebar>
