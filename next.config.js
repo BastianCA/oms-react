@@ -4,7 +4,7 @@ const nextConfig = {
       BASE_URL:
         process.env.NODE_ENV === "production"
           ? process.env.NEXT_PUBLIC_BASE_URL
-          : "http://d-dkr-betel.tricotcorp.cl:8080/oms-service/v1",
+          : "http://tu-url.com",
     },
   
     // Cambio del directorio de construcción
